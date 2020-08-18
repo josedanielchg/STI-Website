@@ -1,0 +1,18 @@
+.section-content {
+  position: relative;
+  z-index: 100;
+
+  & > section,
+  & > div {
+    position: relative;
+    z-index: 100;
+  }
+
+  .about__background-particles {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -100;
+  }
+}

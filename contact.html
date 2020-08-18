@@ -1,0 +1,125 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+    <link rel="icon" type="image/png" href="static/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+    <div class="container contact" id="contact">
+
+        <!-- --- --- Menu--- --- -->
+        <nav class="menu-bar is-hidden ">
+            <a href="index.html" class="menu-bar__link">
+                <img src="static/STI-Logo.png" alt="Soluciones Tecnológicas Integrales Logo">
+            </a>
+            <ul class="menu-bar__list">
+                <li class="menu-bar__item"><a href="index.html" class="menu-bar__item-link">Inicio</a></li>
+                <li class="menu-bar__item"><a href="about.html" class="menu-bar__item-link">Acerca de</a></li>
+                <li class="menu-bar__item"><a href="services.html" class="menu-bar__item-link">Servicios</a></i>
+                <li class="menu-bar__item"><a href="contact.html" class="menu-bar__item-link active">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- --- --- Hamburguer Menu --- --- -->
+
+        <button class="panel-btn hamburger hamburger--spin" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+
+        <div class="global-menu">
+            <div class="global-menu__wrap">
+                <a class="global-menu__item" href="index.html">Inicio</a>
+                <a class="global-menu__item" href="about.html">Acerca de</a>
+                <a class="global-menu__item" href="services.html">Servicios</a>
+                <a class="global-menu__item" href="contact.html">Contacto</a>
+                <div class="global-menu__social-media">
+
+                    <a class="global-menu__item facebook" href="https://www.facebook.com/" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a class="global-menu__item instagram" href="https://www.instagram.com/stica_sc/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a class="global-menu__item whatsapp" href="https://wa.me/584123002507" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+
+                    <a class="global-menu__item twitter" href="https://twitter.com/" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path class="shape-overlays__path"></path>
+            <path class="shape-overlays__path"></path>
+            <path class="shape-overlays__path"></path>
+        </svg>
+
+        <!-- --- --- Header--- --- -->
+        <header class="contact header">
+
+            <!-- --- Logo --- -->
+            <div class="header__logo">
+                <a href="index.html" class="header__link">
+                    <img src="static/STI-Logo.png" alt="Soluciones Tecnológicas Integrales Logo">
+                    <h1 class="header__title">Soluciones Tecnológicas Integrales</h1>
+                </a>
+            </div>
+
+            <!-- --- Titulo --- -->
+            <div class="header__titles">
+                <h2 class="header__principal-title title-section">¡Trabajemos Juntos!</h2>
+                <h3 class="subtitle">Mandanos un mail y empecemos ahora</h3>
+
+                <a href="#section-content" class="header__icon">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div class="header__titles">
+
+
+        </header>
+
+        <div class="section-content" id="section-content">
+            <form action="#" class="contact__form">
+
+                <div class="form__group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+
+                <div class="form__group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="form__group">
+                    <label for="subject">Asunto:</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+
+                <div class="form__group">
+                    <label for="name">Por favor ingrese los detalles:</label>
+                    <textarea name="content" id="text-content" cols="30" rows="5"></textarea>
+                </div>
+
+                <input type="submit" value="Enviar" class="button">
+            </form>
+        </div>
+
+        <script src="js/main.js" type="module"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+// ---------- HAMBURGUER BUTTON ----------
+.panel-btn {
+  display: block;
+  position: fixed;
+  z-index: 1001;
+  bottom: 1vh;
+  right: 1vh;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.6);
+  transition: 0.5s ease all;
+
+  &:hover,
+  &.is-active:hover {
+    opacity: 1;
+    box-shadow: 0 0 5px rgba($color: #000000, $alpha: 1);
+  }
+}
+
+// ----------- GLOBAL ITEM ----------
+.global-menu {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1000;
+
+  // ----------- MENU ITEM ----------
+  &__item {
+    color: $text-color;
+    font-size: 2rem;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+    display: block;
+    margin: 1.5rem 0;
+    transition: transform 0.3s, opacity 0.3s;
+    transition-timing-function: ease-in;
+    position: relative;
+    z-index: 1000;
+    text-align: center;
+
+    &:hover {
+      color: $text-color-light;
+    }
+  }
+
+  &__item.is-opened {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+    pointer-events: auto;
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+  }
+
+  &__social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      width: 4rem;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin: 1rem 1rem;
+      color: $primary-color-light;
+      background-color: $text-color;
+
+      @media (max-width: 500px) {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        margin: 1rem 0.5rem;
+      }
+    }
+  }
+
+  &__item:nth-of-type(1) {
+    transition-delay: 0s;
+  }
+
+  &__item.is-opened:nth-of-type(1) {
+    transition-delay: 0.65s;
+  }
+
+  &__item:nth-of-type(2) {
+    transition-delay: 0s;
+  }
+
+  &__item.is-opened:nth-of-type(2) {
+    transition-delay: 0.7s;
+  }
+
+  &__item:nth-of-type(3) {
+    transition-delay: 0s;
+  }
+
+  &__item.is-opened:nth-of-type(3) {
+    transition-delay: 0.75s;
+  }
+
+  &__item:nth-of-type(4) {
+    transition-delay: 0s;
+  }
+
+  &__item.is-opened:nth-of-type(4) {
+    transition-delay: 0.8s;
+  }
+}
+
+.shape-overlays {
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.shape-overlays.is-opened {
+  pointer-events: auto;
+}
+
+.shape-overlays__path:nth-of-type(1) {
+  fill: #000000;
+}
+
+.shape-overlays__path:nth-of-type(2) {
+  fill: #1d1d1f;
+}
+
+.shape-overlays__path:nth-of-type(3) {
+  fill: $primary-color-light;
+}

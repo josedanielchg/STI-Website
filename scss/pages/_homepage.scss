@@ -1,0 +1,119 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "first second" "first third";
+
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 0.5fr;
+      grid-template-areas: "first first" "second third";
+    }
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__first-article {
+      grid-area: first;
+      padding-bottom: 4rem;
+      position: relative;
+      z-index: 100;
+      background-color: rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+
+      & > div {
+        position: relative;
+        z-index: 100;
+      }
+
+      .header__background-particles {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+
+        div {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .header__title {
+        @media (max-width: 500px) {
+          display: none;
+        }
+      }
+    }
+
+    &__second-article {
+      grid-area: second;
+      background-color: $primary-color-light;
+      padding: 0 1.25rem;
+    }
+
+    &__third-article {
+      grid-area: third;
+      color: #fff;
+      background: $text-color;
+      padding: 0 1.25rem;
+    }
+
+    &__second-article,
+    &__third-article {
+      @media (max-width: 500px) {
+        .header__title {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .button {
+      font-size: 1.25rem;
+    }
+  }
+
+  .services {
+    background: $elements-bg-light;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../static/pattern-curve.svg");
+
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+
+    .cards-container {
+      width: 80%;
+    }
+  }
+
+  .clients {
+    width: 100%;
+    margin-top: -1px;
+    padding-top: 5rem;
+    padding-bottom: 7rem;
+    background-color: $primary-color-light;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}

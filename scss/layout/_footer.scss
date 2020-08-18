@@ -1,0 +1,78 @@
+.footer {
+  padding: 5rem 0 4rem 0;
+  width: 100%;
+  background-color: #222220;
+  color: $text-color-light;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 1rem;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  &__subtitle {
+    font-size: 2rem;
+    font-weight: 100;
+    margin-bottom: 4rem;
+
+    @media (max-width: 600px) {
+      font-size: 1rem;
+    }
+  }
+
+  .button {
+    font-size: 2rem;
+  }
+
+  &__social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+
+    a {
+      width: 3.5rem;
+      height: 3.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin: 2rem 0.5rem;
+      color: $text-color;
+      background-color: $text-color-light;
+      box-shadow: 0 0 5px #000;
+      transition: 0.2s ease-in all;
+      font-size: 1.5rem;
+
+      &:hover {
+        transform: translateY(-0.5rem);
+        color: #fff;
+      }
+
+      &.facebook:hover {
+        background: #3b5998;
+      }
+
+      &.instagram:hover {
+        background: linear-gradient(
+          45deg,
+          rgba(255, 220, 128, 1) 0%,
+          rgba(64, 93, 230, 1) 100%
+        );
+      }
+
+      &.whatsapp:hover {
+        background-color: #25d366;
+      }
+
+      &.twitter:hover {
+        background-color: #1da1f2;
+      }
+    }
+  }
+}
