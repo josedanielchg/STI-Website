@@ -57,10 +57,6 @@
         p {
           margin-right: 1rem;
           text-align: justify;
-
-          @media (max-width: 400px) {
-            //text-align: left;
-          }
         }
 
         .first::first-letter {
@@ -87,6 +83,10 @@
 
       .particles-js {
         height: 100%;
+      }
+
+      @media (max-width: 600px) {
+        display: none;
       }
     }
 

@@ -12,6 +12,7 @@ export default class Carousel {
     // All slides have the same width
     this.slideWidth = this.slides[0].getBoundingClientRect().width;
     this.setSlidePosition();
+    this.refreshWidth();
   }
 
   // ---------------------
@@ -93,6 +94,13 @@ export default class Carousel {
         this.updateDots(currentDot, targetDot);
         this.addHideArrows(targetIndex);
       }
+    });
+  }
+
+  refreshWidth() {
+    addEventListener("resize", () => {
+      this.slideWidth = this.slides[0].getBoundingClientRect().width;
+      this.setSlidePosition();
     });
   }
 }
